@@ -8,7 +8,7 @@ import os
 app = Flask(__name__)
 
 # ── Config ────────────────────────────────────────────────────────────────────
-TOMTOM_API_KEY = os.environ.get("TOMTOM_API_KEY", "Rl73tmVefZWU7uq35jINfCT3mWPfuryi")
+TOMTOM_API_KEY = os.environ.get("TOMTOM_API_KEY")
 MODEL_PATH = "model.pkl"
 
 # ── Load Model ────────────────────────────────────────────────────────────────
