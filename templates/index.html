@@ -226,8 +226,16 @@
 </div>
 
 <script>
-const map = L.map('map', { zoomControl: true }).setView([20.5937, 78.9629], 5);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { maxZoom: 19 }).addTo(map);
+const map = L.map('map', { zoomControl: true })
+    .setView([20.5937, 78.9629], 5);
+
+L.tileLayer(
+    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap contributors'
+    }
+).addTo(map);
 
 let startLatLon = null, endLatLon = null;
 let startMarker = null, endMarker = null;
