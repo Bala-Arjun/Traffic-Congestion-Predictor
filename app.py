@@ -72,7 +72,7 @@ def get_osrm_route(start_lat, start_lon, end_lat, end_lon, alternative=False):
     """Get route(s) from OSRM."""
     alt_param = "true" if alternative else "false"
     url = (
-        f"http://router.project-osrm.org/route/v1/driving/"
+        f"https://router.project-osrm.org/route/v1/driving/"
         f"{start_lon},{start_lat};{end_lon},{end_lat}"
         f"?overview=full&geometries=geojson&alternatives={alt_param}&steps=false"
     )
